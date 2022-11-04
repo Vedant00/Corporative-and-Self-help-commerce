@@ -1,10 +1,10 @@
 import React from "react";
-import NavBar from "./NavBar";
+import Login from "./Login";
 
 function Homepage(props){
-    return <div>
-        <NavBar/>
+    return <div className="Container">
         hello from homepage
+        <Login/>
     </div>
 }
 export default Homepage;
