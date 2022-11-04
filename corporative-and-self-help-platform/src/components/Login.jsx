@@ -12,6 +12,7 @@ function Login(props){
   <input type="password" class="form-control" id="floatingPassword" placeholder="Password"/>
   <label for="floatingPassword">Password</label>
 </div>
+<input class="btn btn-primary" type="submit" value="Submit"></input>
     </div>
 }
 
