@@ -14,14 +14,30 @@
   color: #61dafb;
 }
 
-.log-in{
+.log-in-box{
   overflow:hidden;
-  width: 500px;
   display: flex;
   flex-direction: column;
-  align-items:flex-end;
   padding-right: 20px;
+  padding-top: 10px;
+  align-items:center;
 }
+.log-in{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-style: solid;
+  border-width: 0.8px;
+  border-radius: 5px;
+ border-color:rgb(191, 210, 228);
+  box-shadow: 0px 1px 5px 0px gray;
+  height:396;
+  width: 496;
+  align-items:center;
+}
+
+
+
 
 
 @media only screen and (min-width:768px) {
@@ -39,8 +55,26 @@
     background-color:rgb(47, 210, 255);
     border-color: wheat;
     margin-top: 8px;
-    
-  
+    margin-bottom:10px ;
+  }
+  .log-in-with{
+  margin:3px;
+  padding:4px
+  }
+  .log-in-with{
+    width:350px;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+  }
+  .log-in-with-txt{
+    font-size: 15px;
+   padding-top: 4px;
+  }
+  .fa-brands{
+    margin: 0 10px;
+    padding:0 20px;
+    font-size:17px;
   }
 }
 
@@ -60,6 +94,23 @@
     margin-top: 6px;
     height: 40px;
     width: 111px;
+    margin-bottom:8px;
+   
+  }
+  .log-in-with{
+    width:200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .log-in-with-txt{
+    font-size: 12px;
+   padding-top: 2px;
+  }
+  .fa-brands{
+    margin: 0 7px;
+    padding:0 17px;
+    font-size:15px;
   }
 
 }
@@ -78,9 +129,26 @@
     margin: 5px 0px 5px 5px;
     height: 35px;
     width: 111px;
+    margin-bottom:6px;
+    
   }
   .log-in{
-    padding-top: 10px;
-    align-items:center;
+    padding-top: 5px;
   }
+  .log-in-with{
+    width:200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .log-in-with-txt{
+    font-size: 12px;
+   padding-top: 2px;
+  }
+  .fa-brands{
+    margin: 0 5px;
+    padding:0 15px;
+    font-size:14px;
+  }
+ 
 }

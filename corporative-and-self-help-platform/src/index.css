@@ -1,15 +1,17 @@
 
 html{
   scroll-behavior: smooth;
+  
 }
 body {
-  background-color:#fdf1d880;
+  background-color:aliceblue;
   margin: 0;
   padding: 0;
 
 }
 *{
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
 
