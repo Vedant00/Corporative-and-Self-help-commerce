@@ -12,10 +12,10 @@ function NavBar(props){
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup" >
                   <div class="navbar-nav" >
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link" href="#">Products</a>
-                    <a class="nav-link" href="#">Offers</a>
-                    <a class="nav-link" href="#" >Log-In</a>
+                    <a class="nav-link active" aria-current="page" href="\">Home</a>
+                    <a class="nav-link" href="\products">Products</a>
+                    <a class="nav-link" href="\offers">Offers</a>
+                    <a class="nav-link" href="\login" >Log-In</a>
                     </div>
                 </div>
               </div>
