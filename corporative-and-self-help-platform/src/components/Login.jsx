@@ -13,7 +13,7 @@ function Login(props){
                     <label for="floatingPassword">Password</label>
                 </div>
                 <input class="btn btn-primary" type="Submit" value="Log In"></input>
-                <a href="" align="left">Forgot Password/Username?</a>
+                <a href="" align="left" style={{textDecoration:"none"}}>Forgot Password/Username?</a>
                 <div style={{height:"0.7px",width:"250px",backgroundColor:"rgb(191, 210, 228",marginBottom:"8px" }}></div>
                 <div className="log-in-with" >
                 <p className="log-in-with-txt">Log-In with:  <i class="fa-brands fa-google"></i> <i class="fa-brands fa-facebook"></i> </p>

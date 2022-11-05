@@ -1,6 +1,6 @@
 import React from "react";
 import Login from "./Login";
-import OrderPage from "./OrderPage";
+import OrderPage from "./orderpage";
 
 function Homepage(props){
     return <div>
