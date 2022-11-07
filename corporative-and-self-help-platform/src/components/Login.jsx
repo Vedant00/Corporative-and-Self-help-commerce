@@ -14,15 +14,16 @@ function Login(props){
                 </div>
                 <input class="btn btn-primary" type="Submit" value="Log In"></input>
                 <a href="" align="left" style={{textDecoration:"none"}}>Forgot Password/Username?</a>
-                <div style={{height:"0.7px",width:"250px",backgroundColor:"rgb(191, 210, 228",marginBottom:"8px" }}></div>
-                <div className="log-in-with" >
+              <div style={{height:"0.7px",width:"250px",backgroundColor:"rgb(191, 210, 228",marginBottom:"8px" }}></div>
+              <div className="log-in-with" >
                 <p className="log-in-with-txt">Log-In with:  <i class="fa-brands fa-google"></i> <i class="fa-brands fa-facebook"></i> </p>
-
-        </div>
+              </div>
+              <p>Or ...</p>
+              <a href="\signup" >Create New Account</a>
             
       </div>
        
     </div>
 }
 
-export default Login
+export default Login;
