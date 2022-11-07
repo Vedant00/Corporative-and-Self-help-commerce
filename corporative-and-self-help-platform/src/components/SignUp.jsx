@@ -175,9 +175,11 @@ function SignUp(props){
                     </label>
                     </div>
                     <br></br>
+                    <div class="text-center">
                     <button type="submit" class="btn btn-primary btn-block mb-3">
-                    Create account
+                        Create account
                     </button>
+                    </div>
                     <div class="alert alert-info small" role="alert">
                     By clicking above you agree to our
                     <a href="#" class="alert-link">Terms &amp; Conditions</a> and
