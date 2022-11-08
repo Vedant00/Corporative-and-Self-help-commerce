@@ -25,6 +25,8 @@
   padding: 10px;
 }
 
+
+
 .log-in-box{
   overflow:hidden;
   display: flex;
@@ -67,6 +69,12 @@
     border-color: wheat;
     margin-top: 8px;
     margin-bottom:10px ;
+  }
+  .homepage{
+    overflow: scroll;
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
   }
   .log-in-with{
   margin:3px;
@@ -142,6 +150,12 @@
     width: 111px;
     margin-bottom:6px;
     
+  }
+  .homepage{
+    overflow: scroll;
+    display: inline-grid;
+    grid-template-columns: auto;
+    padding: 10px;
   }
   .log-in{
     padding-top: 5px;
