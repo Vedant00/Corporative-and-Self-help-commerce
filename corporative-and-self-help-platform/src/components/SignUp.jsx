@@ -182,8 +182,8 @@ function SignUp(props){
                     </div>
                     <div class="alert alert-info small" role="alert">
                     By clicking above you agree to our
-                    <a href="#" class="alert-link">Terms &amp; Conditions</a> and
-                    our <a href="#" class="alert-link">Privacy Policy</a>.
+                    <a href="\termsandcondition" class="alert-link">Terms &amp; Conditions</a> and
+                    our <a href="privacypolicy" class="alert-link">Privacy Policy</a>.
                     </div>
                     <div class="text-center">
                     <p>Or ...</p>
