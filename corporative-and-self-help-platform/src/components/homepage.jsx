@@ -5,11 +5,12 @@ const names=['Naruto', 'Sauske', 'Sakaru', 'Kiba', 'Shino', 'Hinata', 'Shikamaru
 
 function Homepage(props){
     return <div className="homepage">
-            { names.map((name)=>{
+                <div className="card-container">
+                { names.map((name)=>{
                 return  <Card product={name} description="This is rice" price="80 ₹/kg"/>
 
             })}
-
-    </div>
-}
+             </div>
+        </div>
+    }
 export default Homepage;

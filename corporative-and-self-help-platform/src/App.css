@@ -1,7 +1,7 @@
-
 .card{
   display: flex;
   flex-direction: row;
+  overflow:block;
   width: 350px;
   height: 250px;
   background: white;
@@ -21,11 +21,17 @@
 }
 
 .card-items{
-  margin: 10px;
-  padding: 10px;
+  margin:0 0 10px 0;
+  padding:8px;
 }
 
 
+
+.homepage{
+  display: flex;
+align-items: center;
+justify-content: center;
+}
 
 .log-in-box{
   overflow:hidden;
@@ -49,6 +55,25 @@
   align-items:center;
 }
 
+.quantity{
+  display: flex;
+  flex-direction: row;
+}
+.quantity p{
+  font-size: 11px;
+}
+
+
+
+.quantity-amt{
+  font-size: 11px;
+  font-weight: bold;
+  width:"10px";
+  width: 20px;
+  height: 20px;
+  padding-left: 5px;
+  margin-left: 10px;
+}
 
 
 
@@ -70,11 +95,20 @@
     margin-top: 8px;
     margin-bottom:10px ;
   }
-  .homepage{
-    overflow: scroll;
+  .card-container{
     display: inline-grid;
     grid-template-columns: auto auto;
     padding: 10px;
+    align-items:flex-start;
+  }
+  .cart-btn{
+    font-size: 10px;
+  }
+  .card:not(:last-child) {
+    margin-right: 60px;
+  }
+  .dropdown-menu{
+    font-size: 12px;
   }
   .log-in-with{
   margin:3px;
@@ -114,7 +148,24 @@
     height: 40px;
     width: 111px;
     margin-bottom:8px;
-   
+  }
+  
+  
+  .cart-btn{
+    font-size: 8px;
+  }
+
+  .card:not(:last-child) {
+    margin-right:5px;
+  }
+  .card-container{
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+    padding-left: 200px;
+  }
+  .dropdown-menu{
+    font-size: 11px;
   }
   .log-in-with{
     width:200px;
@@ -132,6 +183,11 @@
     font-size:15px;
   }
 
+}
+.add-cart{
+  width: 80px;
+  padding: 5px;
+  font-size: 12px;
 }
 
 @media only screen and (max-width:479px) {
@@ -151,11 +207,18 @@
     margin-bottom:6px;
     
   }
-  .homepage{
-    overflow: scroll;
+  .card-container{
+    overflow: hidden;
     display: inline-grid;
     grid-template-columns: auto;
     padding: 10px;
+  }
+  .cart-btn{
+    font-size: 8.5px;
+    font-weight: bold;
+  }
+  .dropdown-menu{
+    font-size: 12px;
   }
   .log-in{
     padding-top: 5px;
