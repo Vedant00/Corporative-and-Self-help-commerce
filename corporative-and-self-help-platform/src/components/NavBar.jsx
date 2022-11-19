@@ -34,7 +34,7 @@ function NavBar(props) {
                 Order
               </a>
               <a class="nav-link" href="\previousOrders">
-                Log-In
+                OrderPage
               </a>
               <a class="nav-link" href="\login">
                 Log-In
