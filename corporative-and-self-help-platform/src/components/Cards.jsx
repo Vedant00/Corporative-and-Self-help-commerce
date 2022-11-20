@@ -1,5 +1,4 @@
 import React,{useState} from "react";
-import logo from "./favicon.ico";
 
 
 function Card(props){
