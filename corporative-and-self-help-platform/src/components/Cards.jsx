@@ -25,7 +25,7 @@ function Card(props){
             <ul class="dropdown-menu">
             
             {temp.map((pack)=>{
-                return<li><a class="dropdown-item" href="#" onClick={()=>{newWeight({pack})}} value="1kg">{pack} KG</a></li>
+                return<li><div class="dropdown-item" onClick={()=>{newWeight(pack)}} value="1kg">{pack} KG</div></li>
             })}
              </ul>
             </div>
