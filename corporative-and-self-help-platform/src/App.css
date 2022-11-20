@@ -1,7 +1,7 @@
 .card{
   display: flex;
   flex-direction: row;
-  overflow:block;
+  overflow:scroll;
   width: 350px;
   height: 250px;
   background: white;

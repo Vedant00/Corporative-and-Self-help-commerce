@@ -7,7 +7,7 @@ function Homepage(props){
     return <div className="homepage">
                 <div className="card-container">
                 { names.map((name)=>{
-                return  <Card product={name} description="This is rice" price="80 ₹/kg"/>
+                return  <Card product={name} description=" data" price="80 ₹/kg"/>
 
             })}
              </div>

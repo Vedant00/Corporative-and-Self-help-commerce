@@ -19,8 +19,9 @@ function Login(props){
                 <p className="log-in-with-txt">Log-In with:  <i class="fa-brands fa-google"></i> <i class="fa-brands fa-facebook"></i> </p>
               </div>
               <p>Or ...</p>
-              <a href="\signup" >Create New Account</a>
-            
+              <a href="\signup" style={{textDecoration:"none"}} >Create New Account</a>
+              <div style={{height:"0.7px",width:"250px",backgroundColor:"rgb(191, 210, 228",marginBottom:"8px" }}></div>
+
       </div>
        
     </div>

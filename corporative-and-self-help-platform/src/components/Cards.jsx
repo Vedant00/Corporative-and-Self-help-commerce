@@ -1,11 +1,16 @@
-import React from "react";
+import React,{useState} from "react";
 import logo from "./favicon.ico";
 
+
 function Card(props){
+    const [weight,setWeight]=useState("Weight");
+    function newWeight(weightin){
+        setWeight(weightin);
+    }
     return <div className="card-container">
          <div className="card">
-        <div className="card-image"><img style={{width:"100px", objectFit:"fit"}} src={require('./favicon.ico') } /></div>
-        <div style={{width:"0.5px", height:"210px",backgroundColor:"black",margin:"20px 10px 20px 20px"}}></div>
+        <div className="card-image sticky-top"><img style={{width:"100px", objectFit:"fit"}} src={require('./favicon.ico') } /></div>
+        <div style={{width:"0.5px", height:"270px",backgroundColor:"black",margin:"20px 10px 20px 20px"}} className="sticky-top"></div>
         <div className="card-items">
             <p>{props.product}</p>
             <p>{props.description}</p>
@@ -14,12 +19,12 @@ function Card(props){
           
         <div class="dropdown">
          <button  className="cart-btn btn btn-secondary btn-sm dropdown-toggle w-50 " type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Weight
+               {weight}
             </button>
-            <ul class="dropdown-menu" >
-                <li><a class="dropdown-item" href="#">1 KG</a></li>
-                <li><a class="dropdown-item" href="#">2 KG</a></li>
-                <li><a class="dropdown-item" href="#">5 KG</a></li>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#" onClick={()=>{newWeight("1 Kg")}} value="1kg">1 KG</a></li>
+                <li><a class="dropdown-item" href="#" onClick={()=>{newWeight("2 Kg")}}>2 KG</a></li>
+                <li><a class="dropdown-item" href="#"onClick={()=>{newWeight("5 Kg")}}>5 KG</a></li>
             </ul>
             </div>
             <div className="quantity">

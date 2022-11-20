@@ -2,7 +2,8 @@ import React from "react";
 
 
 function OrderPage(props){
-    const columnAtrributes=['OrderId','Delivery', 'Delivery Type', 'Order Total', 'Order Status','Details'];
+    const columnAtrributes=['OrderId','Product Name','Details','Price','Weight','Quantity', 'Order Total'];
+    const cart = [];
     return <div class="container container-fluid">
         <table class="table">
             <thead class="thead-light">
