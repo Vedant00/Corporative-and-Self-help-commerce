@@ -11,7 +11,7 @@ function Card(props){
     return <div className="card-container">
          <div className="card">
         <div className="card-image sticky-top"><img style={{width:"100px", objectFit:"fit"}} src={require('./favicon.ico') } /></div>
-        <div style={{width:"0.5px", height:"270px",backgroundColor:"black",margin:"20px 10px 20px 20px"}} className="sticky-top"></div>
+        <div style={{width:"0.5px", height:"220px",backgroundColor:"black",margin:"20px 10px 20px 20px"}} className="sticky-bottom "></div>
         <div className="card-items">
             <p>{props.product}</p>
             <p>{props.description}</p>
