@@ -6,7 +6,7 @@ function Card(props){
     const temp =props.package;
     const [weight,setWeight]=useState("Weight");
     function newWeight(weightin){
-        setWeight(weightin);
+        setWeight(weightin+" Kg");
     }
     return <div className="card-container">
          <div className="card">
@@ -20,7 +20,7 @@ function Card(props){
           
         <div class="dropdown">
          <button  className="cart-btn btn btn-secondary btn-sm dropdown-toggle w-50 " type="button" data-bs-toggle="dropdown" aria-expanded="false">
-               {weight} Kg
+               {weight}
             </button>
             <ul class="dropdown-menu">
             
