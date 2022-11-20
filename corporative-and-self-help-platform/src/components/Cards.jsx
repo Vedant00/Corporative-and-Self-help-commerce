@@ -3,6 +3,7 @@ import logo from "./favicon.ico";
 
 
 function Card(props){
+    const temp =props.package;
     const [weight,setWeight]=useState("Weight");
     function newWeight(weightin){
         setWeight(weightin);
@@ -14,7 +15,7 @@ function Card(props){
         <div className="card-items">
             <p>{props.product}</p>
             <p>{props.description}</p>
-            <p>Price : {props.price}</p>
+            <p>Price : {props.price} ₹/ {props.unit}</p>
 
           
         <div class="dropdown">
@@ -22,10 +23,11 @@ function Card(props){
                {weight}
             </button>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#" onClick={()=>{newWeight("1 Kg")}} value="1kg">1 KG</a></li>
-                <li><a class="dropdown-item" href="#" onClick={()=>{newWeight("2 Kg")}}>2 KG</a></li>
-                <li><a class="dropdown-item" href="#"onClick={()=>{newWeight("5 Kg")}}>5 KG</a></li>
-            </ul>
+            
+            {temp.map((pack)=>{
+                return<li><a class="dropdown-item" href="#" onClick={()=>{newWeight({pack})}} value="1kg">{pack} KG</a></li>
+            })}
+             </ul>
             </div>
             <div className="quantity">
             <p>Quantity :</p>

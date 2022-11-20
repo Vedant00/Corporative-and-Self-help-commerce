@@ -10,7 +10,6 @@ function OrderPage(props) {
     "Quantity",
     "Order Total",
   ];
-  const cart = [];
   return (
     <div class="container container-fluid">
       <table class="table">

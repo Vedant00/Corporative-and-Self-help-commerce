@@ -152,5 +152,4 @@ const products = [
     details: "Best quatity Masur Dal!!",
   },
 ];
-
-export default data;
+export default products;
