@@ -7,11 +7,21 @@ import SignUp from "./components/SignUp";
 import OrderPage from "./components/orderpage";
 import Order from "./components/Order";
 function App() {
+  const names = [
+    "Naruto",
+    "Sauske",
+    "Sakaru",
+    "Kiba",
+    "Shino",
+    "Hinata",
+    "Shikamaru",
+    "Ino",
+  ];
   return (
     <Router>
       <NavBar />
       <Routes>
-        <Route exact path="/" element={<Homepage />} />
+        <Route exact path="/" element={<Homepage names={names} />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
         <Route path="/previousOrders" element={<OrderPage />} />
