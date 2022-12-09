@@ -1,4 +1,5 @@
 import React from "react";
+import {cart} from "./Cards"
 
 function OrderPage(props) {
   const columnAtrributes = [
@@ -20,7 +21,16 @@ function OrderPage(props) {
             })}
           </tr>
         </thead>
-        <tbody></tbody>
+        <tbody>
+          <tr>
+            {cart.map((data)=>{
+              return <td>
+              {console.log(cart)}
+                {data.name}
+              </td>
+            })}
+          </tr>
+        </tbody>
       </table>
     </div>
   );

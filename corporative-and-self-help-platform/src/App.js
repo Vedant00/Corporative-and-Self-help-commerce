@@ -6,7 +6,10 @@ import NavBar from "./components/NavBar";
 import SignUp from "./components/SignUp";
 import OrderPage from "./components/orderpage";
 import Order from "./components/Order";
+
+
 function App() {
+  
   const names = [
     "Naruto",
     "Sauske",

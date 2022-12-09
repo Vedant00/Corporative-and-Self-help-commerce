@@ -24,7 +24,7 @@ function NavBar(props) {
               <a class="nav-link active" aria-current="page" href="\">
                 Home
               </a>
-              <li class="nav-item dropdown">
+              <li class="nav-item dropdown" >
                 <a
                   class="nav-link dropdown-toggle"
                   href="#"

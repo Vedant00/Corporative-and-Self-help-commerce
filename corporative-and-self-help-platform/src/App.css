@@ -37,6 +37,7 @@ justify-content: center;
   overflow:hidden;
   display: flex;
   flex-direction: column;
+  margin: 51px;
   padding-right: 20px;
   padding-top: 10px;
   align-items:center;
@@ -159,10 +160,7 @@ justify-content: center;
     margin-right:5px;
   }
   .card-container{
-    display: inline-grid;
-    grid-template-columns: auto auto;
     padding: 10px;
-    padding-left: 200px;
   }
   .dropdown-menu{
     font-size: 11px;
