@@ -1,5 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const bcrypt = require ('bcryptjs');
+const jwt = require('jsonwebtoken');
 
 require('../DB/script');
 const User = require("../Model/User");
@@ -22,7 +24,7 @@ router.post('/signup',async (req,res)=>{
        const userExist = await User.findOne({email:email});
        if(userExist){
         return res.status(422).json({error:"User already exist"});
-       }else if(password != cpassword){
+       }else if(password !== cpassword){
             return res.status(422).json({err:"passwords are not matching"});
        }
 
@@ -37,20 +39,42 @@ router.post('/signup',async (req,res)=>{
     }
 });
 
+router.get('/signin',(req,res)=>{
+    res.send("Hello from login page");
+})
+
 router.post('/signin', async(req,res)=>{
+    let token;
     try{
-        const [email , password]=req.body;
+        const {email , password}=req.body;
 
         if(!email || ! password){
             return res.status(400).json({error:"Please enter credentials"})
         }
 
         const inputUser= await User.findOne({email:email})
-        if(!inputUser){
-            res.status(400).json({error:"No user found"})
+        
+        if(inputUser){
+            const isMatched = await bcrypt.compare(password, inputUser.password);
+
+            
+            //JWT Cookies
+            token = await inputUser.genrateAuthToken();
+            res.cookie("jwtoken",token,{
+                expires: new Date(Date.now() +25892000000),
+                httpOnly:true
+            });
+
+        
+        if(!isMatched){
+            res.status(400).json({error:"invalid credentials"})
         }else{
             res.json({message:"user signin sucessful"});
         }
+        }else{
+            res.status(400).json({error:"invalid credentials"})
+        }
+        
     }catch(err){
         console.log(err);
     }
