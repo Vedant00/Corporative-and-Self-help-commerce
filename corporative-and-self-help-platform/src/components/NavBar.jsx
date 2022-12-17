@@ -3,13 +3,13 @@ import React from "react";
 function NavBar(props) {
   return (
     <div style={{background: '#F9F9F9'}}>
-      <nav class="navbar navbar-expand-lg" style={{background: '#F9F9F9'}}>
-        <div class="container-fluid">
-          <a class="navbar-brand" href="\">
+      <nav className="navbar navbar-expand-lg " style={{background: '#F9F9F9'}}>
+        <div className="container-fluid">
+          <a className="navbar-brand" href="\">
            Innobytes
           </a>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNavAltMarkup"
@@ -17,50 +17,50 @@ function NavBar(props) {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="\">
+          <div className="collapse navbar-collapse" id="navbarNavAltMarkup" >
+            <div className="navbar-nav">
+              <a className="nav-link active" aria-current="page" href="\">
                 Home
               </a>
-              <li class="nav-item dropdown" >
+              <li className="nav-item dropdown" >
                 <a
-                  class="nav-link dropdown-toggle"
+                  className="nav-link dropdown-toggle"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
                 >
                   Dropdown
                 </a>
-                <ul class="dropdown-menu">
+                <ul className="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <a className="dropdown-item" href="#">
                       Link
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <a className="dropdown-item" href="#">
                       Another link
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <a className="dropdown-item" href="#">
                       A third link
                     </a>
                   </li>
                 </ul>
               </li>
-              <a class="nav-link" href="\offers">
+              <a className="nav-link" href="\offers">
                 Offers
               </a>
-              <a class="nav-link" href="\order">
+              <a className="nav-link" href="\order">
                 Order
               </a>
-              <a class="nav-link" href="\previousOrders">
+              <a className="nav-link" href="\previousOrders">
                 OrderPage
               </a>
-              <a class="nav-link" href="\login">
+              <a className="nav-link" href="\login">
                 Log-In
               </a>
             </div>

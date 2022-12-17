@@ -32,7 +32,7 @@ function Card(props) {
             Price : {props.price} ₹/ {props.unit}
           </p>
 
-          <div class="dropdown">
+          <div className="dropdown">
           <button
               className="cart-btn btn btn-secondary btn-sm dropdown-toggle w-50 "
               type="button"
@@ -42,12 +42,12 @@ function Card(props) {
               
               {weight}
             </button>
-            <ul class="dropdown-menu">
+            <ul className="dropdown-menu">
               {temp.map((pack) => {
                 return (
                   <li>
                     <div
-                      class="dropdown-item"
+                      className="dropdown-item"
                       onClick={() => {
                         newWeight(pack);
                       }}
@@ -64,7 +64,7 @@ function Card(props) {
             <p>Quantity :</p>
             <input className="quantity-amt" placeholder="1" />
           </div>
-          <button type="button" class="add-cart btn btn-primary" onClick={(addToCart)=>{
+          <button type="button" className="add-cart btn btn-primary" onClick={(addToCart)=>{
             cart.push(props);
             setCart("Go To Cart");
           }}>
