@@ -10,21 +10,12 @@ import Order from "./components/Order";
 
 function App() {
   
-  const names = [
-    "Naruto",
-    "Sauske",
-    "Sakaru",
-    "Kiba",
-    "Shino",
-    "Hinata",
-    "Shikamaru",
-    "Ino",
-  ];
+  
   return (
     <Router>
       <NavBar />
       <Routes>
-        <Route exact path="/" element={<Homepage names={names} />} />
+        <Route exact path="/" element={<Homepage />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
         <Route path="/previousOrders" element={<OrderPage />} />

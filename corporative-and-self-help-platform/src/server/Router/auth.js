@@ -18,14 +18,14 @@ router.post('/signup',async (req,res)=>{
     const { fname, lname, email, password, cpassword }=req.body;
    
     if (!fname || !lname || !email || !password || !cpassword){
-        return res.status(422).json({error:"Please fill all fields correctly"});
+        return res.status(422).json({error:"Please fill all fields correctly", status:422});
     }
     try{
        const userExist = await User.findOne({email:email});
        if(userExist){
-        return res.status(422).json({error:"User already exist"});
+        return res.status(422).json({error:"User already exist", status:422});
        }else if(password !== cpassword){
-            return res.status(422).json({err:"passwords are not matching"});
+            return res.status(422).json({error:"Passwords does not match", status:422});
        }
 
        const user =new User({fname, lname, email, password, cpassword});
@@ -33,7 +33,7 @@ router.post('/signup',async (req,res)=>{
 
        await  user.save();
        
-        res.status(201).json({message:"new user created"})
+        res.status(201).json({message:"new user created", status:201})
     }catch(err){
         console.log(err);
     }

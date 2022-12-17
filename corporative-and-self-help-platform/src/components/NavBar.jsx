@@ -2,11 +2,11 @@ import React from "react";
 
 function NavBar(props) {
   return (
-    <div>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div style={{background: '#F9F9F9'}}>
+      <nav class="navbar navbar-expand-lg" style={{background: '#F9F9F9'}}>
         <div class="container-fluid">
           <a class="navbar-brand" href="\">
-            BizzTech
+           Innobytes
           </a>
           <button
             class="navbar-toggler"

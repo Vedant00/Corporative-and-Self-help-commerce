@@ -33,17 +33,22 @@ function SignUp(props) {
         fname,lname,email,password,cpassword
       })
     })
+
     const data = await res.json();
 
-    if(data.status === 422 || !data){
-      window.alert("Invalid Registration")
-      console.log("Invalid Registration");
+      if(data.status === 422 || !data){
+      window.alert(data.error);
+      console.log(data.error);
     }else{
-      window.alert("Registration Sucessful")
-      console.log("Registration Sucessful");
+      window.alert(data.message)
+      console.log(data.message);
       navigate("/Login");
       //"/login" or "/signin"
     }
+   
+
+    
+    
   }
 
 
@@ -125,7 +130,7 @@ function SignUp(props) {
               </div>
               <br></br>
               <div class="text-center">
-                <button type="submit" class="btn btn-primary btn-block mb-3" onClick={postData}>
+                <button type="submit" class="btn btn-primary btn-block mb-3" value="Create account" onClick={postData}>
                   Create account
                 </button>
               </div>

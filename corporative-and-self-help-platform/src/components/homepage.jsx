@@ -1,16 +1,6 @@
 import React from "react";
 import {Card} from "./Cards.jsx"
 import products from "./data";
-const names = [
-  "Naruto",
-  "Sauske",
-  "Sakaru",
-  "Kiba",
-  "Shino",
-  "Hinata",
-  "Shikamaru",
-  "Ino",
-];
 
 function Homepage(props) {
   return (
@@ -25,7 +15,7 @@ function Homepage(props) {
               price={data.price}
               unit={data.unit}
               package={data.package}
-              image={data.image}
+              // image={img}
             />
           );
         })}
