@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar";
 import SignUp from "./components/SignUp";
 import OrderPage from "./components/orderpage";
 import Order from "./components/Order";
+import Account from "./components/Account";
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
         <Route path="/previousOrders" element={<OrderPage />} />
-        <Route path="/Order" element={<Order />} />
+        <Route path="/account" element={<Account/>} />
 
         <Route element={<Homepage />} />
       </Routes>

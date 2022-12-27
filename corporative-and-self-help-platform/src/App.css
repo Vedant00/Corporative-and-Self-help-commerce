@@ -1,3 +1,19 @@
+
+.account-container{
+ height: auto;
+  width:700px;
+
+}
+
+.account-details{
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  
+}
+.account-details p{
+  margin: 20px;
+}
+
 .card{
   display: flex;
   flex-direction: column;
@@ -15,7 +31,8 @@
   position: inherit;
   display:flex;
   width: 100px auto;
- margin:4px;
+ margin:7px;
+ margin-bottom: 50px;
  padding:5px ;
  border: 0px;
  border-style:solid ;
@@ -24,8 +41,13 @@
 }
 
 .card-items{
-  margin:0 0 10px 0;
+  font-size: small;
+  margin:10px 0 10px 0;
   padding:8px;
+}
+
+.card-items p{
+  margin: 5px;
 }
 
 

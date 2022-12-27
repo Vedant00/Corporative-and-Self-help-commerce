@@ -27,7 +27,6 @@ function Card(props) {
        
         <div className="card-items">
           <p>{props.product}</p>
-          <p>{props.description}</p>
           <p>
             Price : {props.price} ₹/ {props.unit}
           </p>

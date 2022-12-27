@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require ('bcryptjs');
 const jwt = require('jsonwebtoken');
+const authenticate=require("../middleware/authenticate")
 
 require('../DB/script');
 const User = require("../Model/User");
@@ -49,7 +50,7 @@ router.post('/signin', async(req,res)=>{
         const {email , password}=req.body;
 
         if(!email || ! password){
-            return res.status(400).json({error:"Please enter credentials"})
+            return res.status(400).json({error:"Please enter credentials", status:400})
         }
 
         const inputUser= await User.findOne({email:email})
@@ -67,18 +68,23 @@ router.post('/signin', async(req,res)=>{
 
         
         if(!isMatched){
-            res.status(400).json({error:"invalid credentials"})
+            res.status(400).json({error:"invalid credentials", status:400})
         }else{
             res.json({message:"user signin sucessful"});
         }
         }else{
-            res.status(400).json({error:"invalid credentials"})
+            res.status(400).json({error:"invalid credentials", status:400})
         }
         
     }catch(err){
         console.log(err);
     }
 });
+
+router.get("/account",authenticate,(req,res)=>{
+    console.log("acount section")
+    res.send(res.rootUser);
+  });
 
 module.exports = router;
 

@@ -5,6 +5,7 @@ function Login(props){
 
   const navigate = useNavigate();
 
+
   const [details, setDetails]= useState({
     email:"",password:""
   })
@@ -33,7 +34,7 @@ function Login(props){
 
     const data = await res.json();
 
-      if(data.status === 422 || !data){
+      if(data.status === 400 || !data){
       window.alert(data.error);
       console.log(data.error);
     }else{
@@ -50,12 +51,12 @@ function Login(props){
     return <div className="log-in-box">
               <div className="log-in">
                 <div className="form-floating mb-3">
-                    <input type="email" className="form-control" id="floatingInput" placeholder="Email address" name="email" value={details.email} onChange={handleChange}/>
-                    <label for="floatingInput">Email address</label>
+                    <input type="email" className="form-control" id="floatingInput" placeholder="Email address" name="email" value={details.email} onChange={handleChange} autoComplete="off"/>
+                    <label htmFor="floatingInput">Email address</label>
                 </div>
                 <div className="form-floating" style={{paddingBottom:"20px"}}>
-                    <input type="password" className="form-control" id="floatingPassword" placeholder="Password" name="password" value={details.password} onChange={handleChange}/>
-                    <label for="floatingPassword">Password</label>
+                    <input type="password" className="form-control" id="floatingPassword" placeholder="Password" name="password" value={details.password} onChange={handleChange} autoComplete="off"/>
+                    <label htmFor="floatingPassword">Password</label>
                 </div>
                 <input className="btn btn-primary" type="Submit" value="Log In" onClick={postData}></input>
                 <a href="" align="left" style={{textDecoration:"none", color:"#8EA32F",margin:"18px"}}>Forgot Password/Username?</a>
