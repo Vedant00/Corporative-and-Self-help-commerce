@@ -9,6 +9,9 @@ body {
   padding: 0;
 
 }
+html, body, #root{
+  height: 100%;
+}
 *{
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;

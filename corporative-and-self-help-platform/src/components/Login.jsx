@@ -62,7 +62,7 @@ function Login(props){
                 <a href="" align="left" style={{textDecoration:"none", color:"#8EA32F",margin:"18px"}}>Forgot Password/Username?</a>
               <div style={{height:"0.7px",width:"250px",backgroundColor:"rgb(191, 210, 228",marginBottom:"8px" }}></div>
               <div className="log-in-with" >
-                <p className="log-in-with-txt">Log-In with:  <i className="fa-brands fa-google"></i> <i className="fa-brands fa-facebook"></i> </p>
+                <p className="log-in-with-txt">Log-In with:  <i className="fa-brands fa-2x fa-google"></i> <i className="fa-brands fa-2x fa-facebook"></i> </p>
               </div>
               <p>Or ...</p>
               <a href="\signup" style={{textDecoration:"none",color:"#8EA32F"}} >Create New Account</a>

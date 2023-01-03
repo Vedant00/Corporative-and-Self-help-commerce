@@ -15,9 +15,8 @@ function Card(props) {
     setWeight(weightin + props.unit);
   }
   return (
-    <div className="card-container">
       <div className="card">
-        <div className="card-image sticky-top">
+        <div className="card-image">
           <img
             style={{ width: "100px", height:"100px", paddingTop:"5px", alignSelf:"center" }}
             src={img}
@@ -33,7 +32,7 @@ function Card(props) {
 
           <div className="dropdown">
           <button
-              className="cart-btn btn btn-secondary btn-sm dropdown-toggle w-50 "
+              className="cart-btn btn  btn-sm dropdown-toggle w-50 "
               type="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
@@ -71,7 +70,6 @@ function Card(props) {
           </button>
         </div>
       </div>
-    </div>
   );
 }
 

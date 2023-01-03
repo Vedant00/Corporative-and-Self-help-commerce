@@ -5,6 +5,7 @@ import products from "./data";
 function Homepage(props) {
   return (
     <div className="homepage">
+      <h1 className="heroText">Our wide variety of products</h1>
       <div className="card-container">
         {products.map((data) => {
           return (
