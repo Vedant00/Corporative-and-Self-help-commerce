@@ -7,7 +7,7 @@ import SignUp from "./components/SignUp";
 import OrderPage from "./components/orderpage";
 import Order from "./components/Order";
 import Account from "./components/Account";
-
+import AddProduct from "./components/AddProduct";
 
 function App() {
   
@@ -21,7 +21,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/previousOrders" element={<OrderPage />} />
         <Route path="/account" element={<Account/>} />
-
+        <Route path="/addProduct" element={<AddProduct/>}/>
         <Route element={<Homepage />} />
       </Routes>
     </Router>

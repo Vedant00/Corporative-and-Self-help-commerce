@@ -2,13 +2,11 @@
 .account-container{
  height: auto;
   width:700px;
-
 }
 
 .account-details{
   display: inline-grid;
   grid-template-columns: auto auto;
-  
 }
 .account-details p{
   margin: 20px;

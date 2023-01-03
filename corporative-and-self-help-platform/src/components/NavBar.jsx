@@ -37,6 +37,9 @@ function NavBar(props) {
               <a className="nav-link" href="\account">
                 Account
               </a>
+              <a className="nav-link" href="\addProduct">
+                Add Products
+              </a>
             </div>
           </div>
         </div>

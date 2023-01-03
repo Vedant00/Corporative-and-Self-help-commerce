@@ -8,7 +8,7 @@ function SignUp(props) {
   //useHistory is useNavigate in react-router-dom v6
   const navigate = useNavigate();
   const [user,setUser]= useState({
-    fname:"",lname:"",email:"",password:"",cpassword:""
+    fname:"",lname:"",email:"",password:"",cpassword:"",userType:""
   });
 
   let name, value;
@@ -22,7 +22,7 @@ function SignUp(props) {
 
   const postData = async (e)=>{
     e.preventDefault();
-    const {fname,lname,email,password,cpassword}=user;
+    const {fname,lname,email,password,cpassword,userType}=user;
 
     const res = await fetch ("/signup",{
       method:"POST",
@@ -30,7 +30,7 @@ function SignUp(props) {
         "Content-Type":"application/json"
       },
       body:JSON.stringify({
-        fname,lname,email,password,cpassword
+        fname,lname,email,password,cpassword,userType
       })
     })
 
@@ -128,6 +128,19 @@ function SignUp(props) {
                     onChange={handleChange}
                 />
               </div>
+              <br></br>
+              <div class="form-check">
+                 <input class="form-check-input" type="radio" id="flexRadioDefault1" name="userType" value="Buyer" onChange={handleChange}/>
+                     <label class="form-check-label" for="flexRadioDefault1"  >
+                      Buyer
+                    </label>
+                </div>
+              <div class="form-check">
+                 <input class="form-check-input" type="radio"  id="flexRadioDefault2" name="userType" value="Seller" onChange={handleChange} />
+                  <label class="form-check-label" for="flexRadioDefault2">
+                    Seller
+                 </label>
+                </div>
               <br></br>
               <div class="text-center">
                 <button type="submit" class="btn btn-primary btn-block mb-3" value="Create account" onClick={postData}>

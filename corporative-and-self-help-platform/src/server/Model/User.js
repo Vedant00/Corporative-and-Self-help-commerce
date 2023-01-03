@@ -26,6 +26,7 @@ const userSchema = new mongoose.Schema({
     },
     password:String,
     cpassword:String,
+    userType:String,
     createdAt:Date,
     cart: mongoose.SchemaTypes.ObjectId,
     adress:adressSchema,

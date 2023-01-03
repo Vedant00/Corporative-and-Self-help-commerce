@@ -1,11 +1,12 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require ('bcryptjs');
-const jwt = require('jsonwebtoken');
+
 const authenticate=require("../middleware/authenticate")
 
 require('../DB/script');
 const User = require("../Model/User");
+const Product = require("../Model/Product");
 
 router.get('/', (req, res) => {
     res.send(`Hello World from Server!`)
@@ -16,7 +17,7 @@ router.get('/signup',(req,res)=>{
 });
 
 router.post('/signup',async (req,res)=>{
-    const { fname, lname, email, password, cpassword }=req.body;
+    const { fname, lname, email, password, cpassword,userType }=req.body;
    
     if (!fname || !lname || !email || !password || !cpassword){
         return res.status(422).json({error:"Please fill all fields correctly", status:422});
@@ -29,7 +30,7 @@ router.post('/signup',async (req,res)=>{
             return res.status(422).json({error:"Passwords does not match", status:422});
        }
 
-       const user =new User({fname, lname, email, password, cpassword});
+       const user =new User({fname, lname, email, password, cpassword, userType});
 
 
        await  user.save();
@@ -86,6 +87,39 @@ router.get("/account",authenticate,(req,res)=>{
     res.send(res.rootUser);
   });
 
+  router.get('/addProducts',(req,res)=>{
+    res.send("Products page");
+})
+
+router.post("/addProducts",async (req,res)=>{
+    const {category,name,pack,price,unit,details }=req.body;
+
+    if(!category || !name || !pack || !price || !unit || !details ){
+        return res.status(422).json({error:"Please fill all fields correctly", status:422});
+    }
+    const xyz=[];
+
+    let temp=pack[0];
+    for (let i=0; i<pack.length;i++){
+        
+        if(pack[i]!==','){
+            if(i!==0){
+                temp = temp+pack[i];
+            }
+            
+            
+        }else{
+            xyz.push(parseInt(temp));
+            temp=""
+        }
+    }
+
+   const product=new Product({category,name,pack:xyz,price,unit,details});
+   await product.save();
+   res.status(201).json({message:"new product added", status:201});
+  
+})
+
 module.exports = router;
 
 
@@ -95,4 +129,14 @@ module.exports = router;
 //     "email":"testing@gmail.com",
 //     "password":"testing123",
 //     "cpassword":"testing123",
+// }
+
+
+// {
+//     "category":"Food",
+//     "name":"burger",
+//     "pack":[2,3,4],
+//     "price":100,
+//     "unit":"No.",
+//     "details":"best burger ever"
 // }

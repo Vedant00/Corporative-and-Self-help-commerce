@@ -18,7 +18,6 @@ app.use(require("./Router/auth"))
 
 
 
-
 const User = require('./Model/User');
 
 app.get('/', (req, res) => {
